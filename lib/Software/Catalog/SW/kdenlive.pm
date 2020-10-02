@@ -36,7 +36,8 @@ sub download_url {
     # https://files.kde.org/kdenlive/release/kdenlive-20.08.1-x86_64.appimage
     # https://files.kde.org/kdenlive/release/kdenlive-20.08.1.exe
 
-    [200, "OK", "https://files.kde.org/kdenlive/release/kdenlive-$args{version}" . ($args{arch} =~ /win/ ? ".exe" : "-x86_64.appimage")];
+    [200, "OK", "https://files.kde.org/kdenlive/release/kdenlive-$args{version}" . ($args{arch} =~ /win/ ? ".exe" : "-x86_64.appimage"), {
+    }];
 }
 
 sub is_dedicated_profile { 0 }
